@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sixFacesDemo</title>
+        <style>
+            .pip {
+                display:block;
+                width:14px;
+                height:14px;
+                border-radius: 50%;
+                margin:10px;                
+                background-color: black;
+            }
+            [class$="face"]{
+                display: -webkit-flex;  
+                width:100px;
+                height:100px;
+                background-color:darkgrey;
+                margin:20px;
+            }
+            .first-face{              
+                align-items: center;
+                justify-content:center;
+            }
+
+            .second-face {
+                flex-direction: column;    
+                justify-content: space-between;
+            }
+            .second-face .pip:nth-of-type(2){
+                align-self:flex-end;
+            }
+
+            .third-face{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .third-face .pip:nth-of-type(2){
+                align-self: center;
+            }
+            .third-face .pip:nth-of-type(3){
+                align-self: flex-end;
+            }
+
+            .column{
+                display:-webkit-flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .fourth-face{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .fifth-face{
+                flex-direction: column;
+                justify-content: space-between;                
+            }
+            .fifth-face .column:nth-of-type(2){
+                align-self: center;
+            }
+
+            .sixth-face{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <div class="first-face">
+            <span class="pip"></span>
+        </div>
+        <div class="second-face">
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+        <div class="third-face">
+            <span class="pip"></span>
+            <span class="pip"></span>
+            <span class="pip"></span>
+        </div>
+        <div class="fourth-face">
+            <div class="column">
+                <span class="pip"></span>
+                <span class="pip"></span>
+            </div>
+            <div class="column">
+                <span class="pip"></span>
+                <span class="pip"></span>
+            </div>
+        </div>
+        <div class="fifth-face">
+            <div class="column">
+                <span class="pip"></span>
+                <span class="pip"></span>
+            </div>
+            <div class="column">
+                <span class="pip"></span>
+            </div>
+            <div class="column">
+                <span class="pip"></span>
+                <span class="pip"></span>
+            </div>
+        </div>
+        <div class="sixth-face">
+                <div class="column">
+                    <span class="pip"></span>
+                    <span class="pip"></span>
+                </div>
+                <div class="column">
+                    <span class="pip"></span>
+                    <span class="pip"></span>
+                </div>
+                <div class="column">
+                    <span class="pip"></span>
+                    <span class="pip"></span>
+                </div>
+        </div>
+    </body>
+</html>
